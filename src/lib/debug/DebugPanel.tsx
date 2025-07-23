@@ -167,10 +167,10 @@ export function DebugPanel({ isVisible = false, onToggle }: DebugPanelProps) {
                     <div className="ml-4 mt-1 text-gray-700">
                       {log.message}
                     </div>
-                    {log.data && (
+                    {log.data !== undefined && (
                       <div className="ml-4 mt-1">
                         <pre className="text-xs bg-gray-100 p-1 rounded overflow-x-auto">
-                          {JSON.stringify(log.data, null, 2)}
+                          {typeof log.data === 'string' ? log.data : JSON.stringify(log.data, null, 2)}
                         </pre>
                       </div>
                     )}

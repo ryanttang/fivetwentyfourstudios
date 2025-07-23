@@ -64,15 +64,17 @@ export function useDebug(options: UseDebugOptions) {
     let hasChanges = false
 
     // Compare props
-    const allKeys = new Set([...Object.keys(prevProps.current), ...Object.keys(currentProps)])
+    const prevObj = (typeof prevProps.current === 'object' && prevProps.current !== null) ? prevProps.current as Record<string, unknown> : {};
+    const currObj = (typeof currentProps === 'object' && currentProps !== null) ? currentProps as Record<string, unknown> : {};
+    const allKeys = new Set([...Object.keys(prevObj), ...Object.keys(currObj)]);
     
     for (const key of allKeys) {
-      const prevValue = (prevProps.current as Record<string, unknown>)[key]
-      const nextValue = (currentProps as Record<string, unknown>)[key]
+      const prevValue = prevObj[key];
+      const nextValue = currObj[key];
       
       if (prevValue !== nextValue) {
-        changedProps[key] = { prev: prevValue, next: nextValue }
-        hasChanges = true
+        changedProps[key] = { prev: prevValue, next: nextValue };
+        hasChanges = true;
       }
     }
 
