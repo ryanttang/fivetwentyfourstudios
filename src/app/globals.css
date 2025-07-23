@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@400;600;700&family=Rubik:wght@400;500;700&display=swap');
 
 :root {
   --background: #ffffff;
@@ -68,7 +68,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Nunito', 'Quicksand', 'Rubik', 'Inter', system-ui, sans-serif;
   font-feature-settings: 'rlig' 1, 'calt' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -169,11 +169,11 @@ html {
 
 /* Gradient backgrounds */
 .gradient-bg {
-  background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 50%, #8b5cf6 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 50%, var(--lavender) 100%);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 50%, #8b5cf6 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--lavender) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -198,20 +198,20 @@ html {
 
 /* Button styles */
 .btn-primary {
-  @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-primary-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  @apply bg-primary-400 text-white px-7 py-3 rounded-full font-bold text-base shadow-md transition-all duration-200 hover:bg-primary-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2;
 }
 
 .btn-secondary {
-  @apply bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold border border-gray-300 transition-all duration-200 hover:bg-gray-50 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  @apply bg-accent-100 text-primary-700 px-7 py-3 rounded-full font-bold text-base border-2 border-accent-200 transition-all duration-200 hover:bg-accent-200 hover:text-primary-900 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2;
 }
 
 .btn-ghost {
-  @apply text-gray-900 font-semibold transition-colors duration-200 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  @apply text-primary-500 font-bold transition-colors duration-200 hover:text-primary-700 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2;
 }
 
 /* Card styles */
 .card {
-  @apply bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 p-8 hover:shadow-lg transition-shadow duration-200;
+  @apply bg-white rounded-3xl shadow-lg ring-1 ring-accent-100 p-8 hover:shadow-xl transition-shadow duration-200 border-2 border-accent-100;
 }
 
 .card-hover {
@@ -234,7 +234,7 @@ html {
 
 /* Section styles */
 .section-padding {
-  @apply py-24 sm:py-32;
+  @apply py-20 sm:py-28;
 }
 
 /* Grid styles */

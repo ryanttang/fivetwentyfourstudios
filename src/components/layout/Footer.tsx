@@ -54,7 +54,7 @@ export default function Footer() {
               FiveTwentyFour Studios
             </motion.div>
             <p className="text-gray-300 text-sm leading-6">
-              We build high-performing marketing engines for B2B brands that generate pipeline and improve marketing ROI.
+              Your friendly partner for small business success online. We make it easy for you to launch, grow, and improve your business with beautiful websites, smart SEO tools, and simple CRM support—always with a personal touch.
             </p>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -114,7 +114,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 border-t border-gray-800 pt-8">
           <p className="text-xs leading-5 text-gray-400">
-            &copy; 2024 FiveTwentyFour Studios. All rights reserved.
+            &copy; 2025 FiveTwentyFour Studios. All rights reserved.
           </p>
         </div>
       </div>

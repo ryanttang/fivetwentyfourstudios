@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion'
 
 const values = [
@@ -44,19 +46,16 @@ const team = [
     name: 'Sarah Chen',
     role: 'Founder & CEO',
     bio: 'Former VP of Marketing at multiple B2B SaaS companies. Expert in demand generation and marketing automation.',
-    image: '/team/sarah.jpg',
   },
   {
     name: 'Marcus Rodriguez',
     role: 'Head of Strategy',
     bio: '15+ years in B2B marketing. Specializes in marketing strategy and campaign optimization.',
-    image: '/team/marcus.jpg',
   },
   {
     name: 'Emily Watson',
     role: 'Creative Director',
     bio: 'Award-winning creative director with expertise in B2B content and brand development.',
-    image: '/team/emily.jpg',
   },
 ]
 
@@ -80,7 +79,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-6 text-lg leading-8 text-gray-600"
           >
-            We're a team of B2B marketing experts passionate about helping companies build high-performing marketing engines that drive real business results.
+            We're passionate about helping small business owners launch, grow, and improve their online presence with beautiful websites, effective SEO, and easy-to-use CRM tools.
           </motion.p>
         </div>
       </div>
@@ -105,15 +104,15 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="mt-6 text-lg leading-8 text-gray-600 space-y-6"
             >
-                              <p>
-                  FiveTwentyFour Studios was founded in 2020 by a team of marketing veterans who were frustrated by the gap between what agencies promised and what they actually delivered.
-                </p>
-                <p>
-                  We saw too many companies spending significant budgets on marketing that looked good but didn&apos;t drive real business results. That&apos;s why we built an agency focused on one thing: performance.
-                </p>
-                <p>
-                  Today, we work with B2B companies of all sizes, from startups to enterprise organizations, helping them build marketing engines that generate pipeline, improve ROI, and create lasting competitive advantages.
-                </p>
+              <p>
+                FiveTwentyFour Studios was founded to empower small business owners with the digital tools and support they need to succeed online.
+              </p>
+              <p>
+                We saw too many small businesses struggling to get noticed or manage their customer relationships effectively. That's why we built a studio focused on one thing: helping small businesses thrive in the digital world.
+              </p>
+              <p>
+                Today, we work with small businesses of all kinds, helping them launch new websites, improve their online presence, attract more customers, and build lasting relationships.
+              </p>
             </motion.div>
           </div>
         </div>
@@ -139,7 +138,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="mt-6 text-lg leading-8 text-gray-600"
             >
-              These core principles guide everything we do and how we work with our clients.
+              These core principles guide everything we do for small business owners and how we work with our clients.
             </motion.p>
           </div>
           <motion.div

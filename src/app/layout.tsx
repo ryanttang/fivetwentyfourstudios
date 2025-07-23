@@ -1,20 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import FloatingActionButton from '@/components/ui/FloatingActionButton'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'FiveTwentyFour Studios - B2B Marketing Agency',
-  description: 'We build high-performing marketing engines for B2B companies. Transform your marketing with data-driven strategies that generate pipeline and improve ROI.',
-  keywords: 'B2B marketing, demand generation, marketing agency, lead generation, marketing automation',
+  title: 'FiveTwentyFour Studios - Small Business Website & SEO Solutions',
+  description: 'Empowering small business owners to launch, grow, and improve their online presence. We provide website design, improvements, SEO tools, and CRM support to help your business succeed online.',
+  keywords: 'small business, website design, SEO, CRM, online presence, digital marketing, business growth',
   authors: [{ name: 'FiveTwentyFour Studios' }],
   openGraph: {
-    title: 'FiveTwentyFour Studios - B2B Marketing Agency',
-    description: 'We build high-performing marketing engines for B2B companies.',
+    title: 'FiveTwentyFour Studios - Small Business Website & SEO Solutions',
+    description: 'Empowering small business owners to launch, grow, and improve their online presence with website design, SEO, and CRM support.',
     url: 'https://fivetwentyfourstudios.com',
     siteName: 'FiveTwentyFour Studios',
     images: [
@@ -30,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FiveTwentyFour Studios - B2B Marketing Agency',
-    description: 'We build high-performing marketing engines for B2B companies.',
+    title: 'FiveTwentyFour Studios - Small Business Website & SEO Solutions',
+    description: 'Empowering small business owners to launch, grow, and improve their online presence with website design, SEO, and CRM support.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -57,7 +54,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+      <body className="font-sans bg-white text-gray-900">
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1 pt-16">

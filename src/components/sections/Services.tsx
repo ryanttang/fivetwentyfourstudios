@@ -6,42 +6,42 @@ import { useState } from 'react'
 
 const services = [
   {
-    title: 'Content & Creative',
-    description: "We'll make your prospects stop scrolling.",
-    longDescription: 'Create compelling content that captures attention and drives engagement. From blog posts to social media content, we craft messages that resonate with your target audience.',
-    href: '/services#content',
+    title: 'Website Design & Improvements',
+    description: 'Launch or refresh your business website.',
+    longDescription: 'Professional, modern, and mobile-friendly websites tailored for small businesses. We handle new builds, redesigns, and ongoing improvements to help you stand out online.',
+    href: '/services#websites',
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
       </svg>
     ),
-    features: ['Content Strategy', 'Blog Writing', 'Social Media', 'Video Content', 'Brand Storytelling'],
+    features: ['Custom Website Design', 'Mobile Optimization', 'Site Redesigns', 'Performance Improvements', 'Maintenance'],
     color: 'from-blue-500 to-cyan-500',
   },
   {
-    title: 'Paid Media & Performance',
-    description: 'Build, optimize and scale your performance marketing.',
-    longDescription: 'Maximize your advertising ROI with data-driven paid media strategies. We optimize campaigns across all channels to deliver measurable results.',
-    href: '/services#media',
+    title: 'SEO Tools & Services',
+    description: 'Get found by more customers online.',
+    longDescription: 'Boost your search engine rankings and attract more local customers. We provide on-page SEO, keyword research, technical optimization, and easy-to-use SEO tools for small business owners.',
+    href: '/services#seo',
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
       </svg>
     ),
-    features: ['Google Ads', 'LinkedIn Ads', 'Facebook/Instagram', 'Retargeting', 'Performance Optimization'],
+    features: ['SEO Audits', 'Keyword Research', 'On-Page Optimization', 'Local SEO', 'SEO Tools'],
     color: 'from-green-500 to-emerald-500',
   },
   {
-    title: 'Data & Measurement',
-    description: 'We make the invisible visible.',
-    longDescription: 'Turn data into actionable insights. We help you track, measure, and optimize your marketing performance with advanced analytics and reporting.',
-    href: '/services#data',
+    title: 'CRM & Customer Support',
+    description: 'Manage and grow your customer relationships.',
+    longDescription: 'Simple, effective CRM solutions and support to help you track leads, manage contacts, and improve customer service. We help you set up and use the right tools for your business.',
+    href: '/services#crm',
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 01-8 0M12 14v7m-7-7a7 7 0 0114 0v7H5v-7z" />
       </svg>
     ),
-    features: ['Analytics Setup', 'Conversion Tracking', 'ROI Measurement', 'A/B Testing', 'Performance Reporting'],
+    features: ['CRM Setup', 'Lead Tracking', 'Contact Management', 'Customer Support Tools', 'Ongoing Support'],
     color: 'from-purple-500 to-pink-500',
   },
 ]
@@ -71,8 +71,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6"
           >
-            Level up your marketing, improve{' '}
-            <span className="text-gradient">marketing ROI</span>
+            Everything you need to grow your business online
           </motion.h2>
           
           <motion.p
@@ -82,7 +81,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-lg leading-8 text-gray-600"
           >
-            Better marketing leads to better marketing ROI. At FiveTwentyFour Studios, we help you level up your complete marketing engine. From strategy to content, advertising, and measurement.
+            We help small business owners launch, grow, and improve their online presence with affordable website design, SEO tools, and CRM support.
           </motion.p>
         </div>
 

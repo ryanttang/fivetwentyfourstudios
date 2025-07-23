@@ -82,7 +82,7 @@ export default function Header() {
               <span className="sr-only">FiveTwentyFour Studios</span>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="text-2xl font-bold text-gradient"
+                className="text-2xl font-bold text-primary-900"
               >
                 FiveTwentyFour Studios
               </motion.div>
@@ -163,7 +163,7 @@ export default function Header() {
               <div className="flex items-center justify-between">
                 <Link href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">FiveTwentyFour Studios</span>
-                  <div className="text-2xl font-bold text-gradient">FiveTwentyFour Studios</div>
+                  <div className="text-2xl font-bold text-primary-900">FiveTwentyFour Studios</div>
                 </Link>
                 <button
                   type="button"
