@@ -13,7 +13,7 @@ export interface LogEntry {
   level: LogLevel
   component: string
   message: string
-  data?: any
+  data?: unknown
   error?: Error
   performance?: {
     duration: number
@@ -73,23 +73,23 @@ class DebugLogger {
     }
   }
 
-  debug(component: string, message: string, data?: any) {
+  debug(component: string, message: string, data?: unknown) {
     this.addLog({ level: LogLevel.DEBUG, component, message, data })
   }
 
-  info(component: string, message: string, data?: any) {
+  info(component: string, message: string, data?: unknown) {
     this.addLog({ level: LogLevel.INFO, component, message, data })
   }
 
-  warn(component: string, message: string, data?: any) {
+  warn(component: string, message: string, data?: unknown) {
     this.addLog({ level: LogLevel.WARN, component, message, data })
   }
 
-  error(component: string, message: string, error?: Error, data?: any) {
+  error(component: string, message: string, error?: Error, data?: unknown) {
     this.addLog({ level: LogLevel.ERROR, component, message, error, data })
   }
 
-  critical(component: string, message: string, error?: Error, data?: any) {
+  critical(component: string, message: string, error?: Error, data?: unknown) {
     this.addLog({ level: LogLevel.CRITICAL, component, message, error, data })
   }
 
@@ -97,7 +97,7 @@ class DebugLogger {
   time(component: string, operation: string) {
     const start = performance.now()
     return {
-      end: (data?: any) => {
+      end: (data?: unknown) => {
         const duration = performance.now() - start
         this.addLog({
           level: LogLevel.DEBUG,
@@ -111,7 +111,7 @@ class DebugLogger {
   }
 
   // Component lifecycle tracking
-  componentMount(component: string, props?: any) {
+  componentMount(component: string, props?: unknown) {
     this.info(component, 'Component mounted', { props })
   }
 
@@ -119,12 +119,12 @@ class DebugLogger {
     this.info(component, 'Component unmounted')
   }
 
-  componentUpdate(component: string, prevProps?: any, nextProps?: any) {
+  componentUpdate(component: string, prevProps?: unknown, nextProps?: unknown) {
     this.debug(component, 'Component updated', { prevProps, nextProps })
   }
 
   // Error boundary tracking
-  componentError(component: string, error: Error, errorInfo?: any) {
+  componentError(component: string, error: Error, errorInfo?: unknown) {
     this.error(component, 'Component error', error, errorInfo)
   }
 

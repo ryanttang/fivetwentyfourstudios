@@ -47,7 +47,7 @@ const services = [
 ]
 
 export default function Services() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  // Remove: const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
     <section className="bg-white section-padding">
@@ -100,8 +100,8 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 * index }}
               viewport={{ once: true }}
-              onHoverStart={() => setHoveredIndex(index)}
-              onHoverEnd={() => setHoveredIndex(null)}
+              onHoverStart={() => {}}
+              onHoverEnd={() => {}}
               className="group relative"
             >
               <div className="card-hover h-full">
@@ -130,7 +130,7 @@ export default function Services() {
                   {/* Features */}
                   <div className="mb-6">
                     <div className="grid grid-cols-1 gap-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature) => (
                         <div key={feature} className="flex items-center text-sm text-gray-600">
                           <svg className="h-4 w-4 text-primary-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

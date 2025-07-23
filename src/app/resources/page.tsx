@@ -94,8 +94,6 @@ const guides = [
   },
 ]
 
-const categories = ['All', 'Strategy', 'Content', 'Automation', 'Performance', 'Analytics', 'Social Media']
-
 export default function ResourcesPage() {
   return (
     <div className="bg-white">

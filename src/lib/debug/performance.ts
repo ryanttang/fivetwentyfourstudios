@@ -44,8 +44,10 @@ class PerformanceMonitor {
     
     // Get memory usage if available
     if ('memory' in performance) {
-      const memory = (performance as any).memory
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024 // MB
+      const memory = (performance as unknown as { memory: { usedJSHeapSize: number } })?.memory
+      if (memory) {
+        this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024 // MB
+      }
     }
 
     logger.info('PerformanceMonitor', 'Performance monitoring completed', this.metrics)

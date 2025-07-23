@@ -144,7 +144,7 @@ export default function ContactForm() {
         </div>
         <div className="ml-3 text-sm">
           <label htmlFor="terms" className="text-gray-700">
-            By clicking 'Submit' you're confirming that you agree with our{' '}
+            By clicking &apos;Submit&apos; you&apos;re confirming that you agree with our{' '}
             <a href="/terms" className="text-primary-600 hover:text-primary-500">
               Terms and Conditions
             </a>

@@ -72,7 +72,7 @@ const results = [
 ]
 
 export default function Results() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  useState<number | null>(null)
 
   return (
     <section className="bg-gray-50 section-padding">
@@ -124,8 +124,8 @@ export default function Results() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 * index }}
               viewport={{ once: true }}
-              onHoverStart={() => setHoveredIndex(index)}
-              onHoverEnd={() => setHoveredIndex(null)}
+              onHoverStart={() => {}}
+              onHoverEnd={() => {}}
               className="group relative"
             >
               <div className="card-hover h-full">

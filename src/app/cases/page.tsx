@@ -84,8 +84,6 @@ const caseStudies = [
   },
 ]
 
-const industries = ['All', 'SaaS', 'FinTech', 'Technology', 'Marketing Technology']
-
 export default function CasesPage() {
   return (
     <div className="bg-white">

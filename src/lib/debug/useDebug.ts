@@ -22,7 +22,7 @@ export function useDebug(options: UseDebugOptions) {
 
   const mountTime = useRef<number>(Date.now())
   const renderCount = useRef<number>(0)
-  const prevProps = useRef<any>(null)
+  const prevProps = useRef<unknown>(null)
 
   // Set log level for this component
   useEffect(() => {
@@ -54,21 +54,21 @@ export function useDebug(options: UseDebugOptions) {
   }, [componentName, trackPerformance])
 
   // Props tracking
-  const trackPropsChange = useCallback((currentProps: any) => {
+  const trackPropsChange = useCallback((currentProps: unknown) => {
     if (!trackProps || !prevProps.current) {
       prevProps.current = currentProps
       return
     }
 
-    const changedProps: Record<string, { prev: any; next: any }> = {}
+    const changedProps: Record<string, { prev: unknown; next: unknown }> = {}
     let hasChanges = false
 
     // Compare props
     const allKeys = new Set([...Object.keys(prevProps.current), ...Object.keys(currentProps)])
     
     for (const key of allKeys) {
-      const prevValue = prevProps.current[key]
-      const nextValue = currentProps[key]
+      const prevValue = (prevProps.current as Record<string, unknown>)[key]
+      const nextValue = (currentProps as Record<string, unknown>)[key]
       
       if (prevValue !== nextValue) {
         changedProps[key] = { prev: prevValue, next: nextValue }
@@ -85,28 +85,28 @@ export function useDebug(options: UseDebugOptions) {
   }, [componentName, trackProps])
 
   // Debug methods
-  const debug = useCallback((message: string, data?: any) => {
+  const debug = useCallback((message: string, data?: unknown) => {
     logger.debug(componentName, message, data)
   }, [componentName])
 
-  const info = useCallback((message: string, data?: any) => {
+  const info = useCallback((message: string, data?: unknown) => {
     logger.info(componentName, message, data)
   }, [componentName])
 
-  const warn = useCallback((message: string, data?: any) => {
+  const warn = useCallback((message: string, data?: unknown) => {
     logger.warn(componentName, message, data)
   }, [componentName])
 
-  const error = useCallback((message: string, error?: Error, data?: any) => {
+  const error = useCallback((message: string, error?: Error, data?: unknown) => {
     logger.error(componentName, message, error, data)
   }, [componentName])
 
-  const critical = useCallback((message: string, error?: Error, data?: any) => {
+  const critical = useCallback((message: string, error?: Error, data?: unknown) => {
     logger.critical(componentName, message, error, data)
   }, [componentName])
 
   // Render tracking
-  const trackRender = useCallback((props?: any) => {
+  const trackRender = useCallback((props?: unknown) => {
     renderCount.current++
     
     if (trackProps && props) {
