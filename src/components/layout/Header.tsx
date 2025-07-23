@@ -5,6 +5,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useDebug } from '@/lib/debug'
 
 const navigation = [
   { name: 'Services', href: '/services' },
@@ -17,6 +18,16 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
+  const debug = useDebug({
+    componentName: 'Header',
+    trackProps: true,
+    trackPerformance: true,
+    trackLifecycle: true
+  })
+
+  // Track component render
+  debug.trackRender()
 
   return (
     <header className="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200">

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useDebug } from '@/lib/debug'
 
 const navigation = {
   services: [
@@ -29,6 +30,16 @@ const navigation = {
 }
 
 export default function Footer() {
+  const debug = useDebug({
+    componentName: 'Footer',
+    trackProps: true,
+    trackPerformance: true,
+    trackLifecycle: true
+  })
+
+  // Track component render
+  debug.trackRender()
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
