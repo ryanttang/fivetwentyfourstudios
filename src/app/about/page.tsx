@@ -105,15 +105,15 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="mt-6 text-lg leading-8 text-gray-600 space-y-6"
             >
-              <p>
-                FiveTwentyFour Studios was founded in 2020 by a team of marketing veterans who were frustrated by the gap between what agencies promised and what they actually delivered.
-              </p>
-              <p>
-                We saw too many companies spending significant budgets on marketing that looked good but didn't drive real business results. That's why we built an agency focused on one thing: performance.
-              </p>
-              <p>
-                Today, we work with B2B companies of all sizes, from startups to enterprise organizations, helping them build marketing engines that generate pipeline, improve ROI, and create lasting competitive advantages.
-              </p>
+                              <p>
+                  FiveTwentyFour Studios was founded in 2020 by a team of marketing veterans who were frustrated by the gap between what agencies promised and what they actually delivered.
+                </p>
+                <p>
+                  We saw too many companies spending significant budgets on marketing that looked good but didn&apos;t drive real business results. That&apos;s why we built an agency focused on one thing: performance.
+                </p>
+                <p>
+                  Today, we work with B2B companies of all sizes, from startups to enterprise organizations, helping them build marketing engines that generate pipeline, improve ROI, and create lasting competitive advantages.
+                </p>
             </motion.div>
           </div>
         </div>
